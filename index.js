@@ -73,11 +73,12 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
 
+
+console.log(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -132,9 +133,29 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+function generateChoice(num) {
+  if (Math.ceil(num*3) === 1) {
+    return "rock";
+  } else if (Math.ceil(num*3) === 2) {
+    return "paper";
+  } else {
+    return "scissors";
+  }
 }
+var compNum = generateChoice(Math.random());
+var userNum = generateChoice(Math.random());
+function game(user, computer) {
+  if (user === computer) {
+    return "it's a tie";
+  } else if ((user === "scissors" && computer === "paper") ||
+            (user === "paper" && computer === "rock") ||
+            (user === "rock" && computer === "scissors")) {
+              return "you win!";
+  } else {
+    return "you lose!";
+  }
+} 
+game(compNum, userNum);
   
   
 
