@@ -18,6 +18,8 @@ Do the following:
    HINT: no function required
 */
 
+  
+
 
 
 /*
@@ -170,10 +172,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kil){
+    return kil *  0.621371;
   }
-
+console.log(miles(15))
 
 
 //Task 5b - Feet to CM
@@ -184,10 +186,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
- 
+ console.log(feet(5000))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -200,11 +202,11 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(count){
+  for (let i = count; i >= count; count --)
+  return `${count} bottles of soda on the wall, ${count} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
   }
-
-
+  console.log(annoyingSong(5))
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -220,10 +222,21 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+
+  function grade(oo100){
+    if (oo100 >= 90) {
+      return ('you got a A');
+    } else if (oo100 >= 80 && oo100 <= 89) {
+      return ('you got a B');
+    } else if (oo100 >= 70 && oo100 <= 79) {
+      return ('you got a C');
+    } else if (oo100 >= 60 && oo100 <= 69) {
+      return ('you got a D');
+    } else {
+    return ('you got a F');
+    }
   }
-  
+  grade(76)
   
   
   
